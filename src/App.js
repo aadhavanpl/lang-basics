@@ -3,16 +3,25 @@
 import * as React from "react";
 import Button from '@mui/material/Button'
 import './App.css';
+//import './random.js';
+//import * as fs from 'fs'
 
+let final_ans = "இல்"
+let ans = "";
+
+/*function stringAppend(letter) {
+  ans = ans.concat(letter);
+  console.log(ans);
+}*/
 
 function App() {
   return (
     <div>
         <div className='App'>
-          <Button>‎</Button>
-          <Button variant = "contained">அ</Button>
-          <Button variant = "contained">ஆ</Button>
-          <Button variant = "contained">இ</Button>
+          <Button variant = "contained" onClick={() => { console.log(ans);console.log(final_ans); if(ans===final_ans) console.log("correct")}}>‎</Button>
+          <Button variant = "contained" onClick={() => { ans = ans.concat("அ");}}>அ</Button>
+          <Button variant = "contained" onClick={() => { ans = ans.concat("ஆ");}}>ஆ</Button>
+          <Button variant = "contained" onClick={() => { ans = ans.concat("இ");}}>இ</Button>
           <Button variant = "contained">ஈ</Button>
           <Button variant = "contained">உ</Button>
           <Button variant = "contained">ஊ</Button>
@@ -218,7 +227,7 @@ function App() {
         </div>
  
         <div className='App'>
-          <Button variant = "contained">ல்</Button>
+          <Button variant = "contained" onClick={() => { ans = ans.concat("ல்");}}>ல்</Button>
           <Button variant = "contained">ல</Button>
           <Button variant = "contained">லா</Button>
           <Button variant = "contained">லி</Button>
