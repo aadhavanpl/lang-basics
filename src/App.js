@@ -3,10 +3,10 @@
 import * as React from "react";
 import Button from '@mui/material/Button'
 import './App.css';
-//import './random.js';
-//import * as fs from 'fs'
+import { randomWords } from "./random";
 
-let final_ans = "ஈகூஙெ"
+let final_ans = randomWords();
+//console.log(final_ans)
 let ans = "";
 
 /*function stringAppend(letter) {
@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
         <div className='App'>
-          <Button variant = "contained" onClick={() => { console.log(ans);console.log(final_ans); if(ans===final_ans) console.log("correct"); else console.log("incorrect. try again"); ans = "";}}>‎</Button>
+          <Button variant = "contained" onClick={() => {console.log(ans);    console.log(final_ans);     if(ans===final_ans)  {       console.log("correct");         final_ans = randomWords()    }    else         console.log("incorrect. try again");         ans = "";    }}>‎</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("அ");}}>அ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஆ");}}>ஆ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("இ");}}>இ</Button>

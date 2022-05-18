@@ -1,12 +1,8 @@
-import * as fs from 'fs'
-
-var fs = require('fs');
-
-function randomWords(words){
-    var readME = fs.readFileSync('text.txt', 'utf8');
+export function randomWords(){
+    var readME = "ஆல், இல், எல், ஏல், ஒல், கல், கால், கொல், கோல், சால், சூல், செல், சேல், சொல், தால், தோல், நல், நால், நில், நூல், நெல், பல், பால், புல், மால், மேல், வல், வால், வில், வெல், வேல்";
     var wordArr = readME.split(', ');
 
-    words = (words > wordArr.length) ? wordArr.length : words;
+    /*words = (words > wordArr.length) ? wordArr.length : words;
 
     var randWords = [];
     for (let i = 0; i < words; i++){
@@ -18,12 +14,9 @@ function randomWords(words){
 
         randWords.push(newRandom);
     }
-    return randWords.join(', ');
+    return randWords.join(', ');*/
 
-    let newRandom;
     let rand = Math.floor(Math.random() * wordArr.length);
-    newRandom = wordArr[rand]
-    return newRandom
+    return wordArr[rand];
 
 }
-console.log(randomWords(1));
