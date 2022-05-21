@@ -4,8 +4,6 @@ import * as React from "react";
 import Button from '@mui/material/Button'
 import './App.css';
 import { randomWords } from "./random";
-import test from "./test.mp3";
-import {Howl, Howler} from "howler" 
 
 let final_ans = randomWords();
 //console.log(final_ans)
@@ -18,11 +16,22 @@ let ans = "";
   console.log(ans);
 }*/
 
+function AudioPlayer() {
+  return (
+    <div>
+      <audio id="idAudio">
+        <source src= "http://127.0.0.1:8887/test.mp3"></source>
+      </audio>
+      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.play();}} type="button">Play Audio</Button>
+      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.pause();}} type="button">Pause Audio</Button>
+    </div>
+  )
+}
+
 function App() {
   return (
     <div>
         <div className='App'>
-        <Button variant = "contained" onClick={() => {const sound = new Howl; sound.play()}}>play</Button>
           <Button variant = "contained" onClick={() => {console.log(ans);    console.log(final_ans);     if(ans===final_ans)  {       console.log("correct");         final_ans = randomWords()    }    else         console.log("incorrect. try again");         ans = "";    }}>‎</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("அ");}}>அ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஆ");}}>ஆ</Button>
@@ -330,4 +339,14 @@ function App() {
   );
 }
 
-export default App;
+function body() {
+  return (
+    <div>
+      <AudioPlayer />
+      <App />
+    </div>
+  
+  )
+}
+
+export default body;
