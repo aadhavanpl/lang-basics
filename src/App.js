@@ -9,21 +9,20 @@ let final_ans = randomWords();
 //console.log(final_ans)
 let ans = "";
 
-
+let source = "http://127.0.0.1:8887/audio/" + final_ans + ".m4a";
 
 /*function stringAppend(letter) {
   ans = ans.concat(letter);
   console.log(ans);
 }*/
 
+
 function AudioPlayer() {
   return (
     <div>
-      <audio id="idAudio">
-        <source src= "http://127.0.0.1:8887/test.mp3"></source>
-      </audio>
-      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.play();}} type="button">Play Audio</Button>
-      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.pause();}} type="button">Pause Audio</Button>
+      <Button onClick={() => {console.log(source); document.getElementById("audiosource").setAttribute('src', source);}} type="button">Reset</Button>
+      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.play();}} type="button">Play</Button>
+      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.pause(); GFG.currentTime = 0;}} type="button">Stop</Button>
     </div>
   )
 }

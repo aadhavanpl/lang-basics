@@ -1,5 +1,5 @@
 export function randomWords(){
-    var readME = "ஆல், இல், எல், ஏல், ஒல், கல், கால், கொல், கோல், சால், சூல், செல், சேல், சொல், தால், தோல், நல், நால், நில், நூல், நெல், பல், பால், புல், மால், மேல், வல், வால், வில், வெல், வேல்";
+    var readME = "ஆல், இல், கல், கால், கொல், கோல், சூல், செல், சொல்";
     var wordArr = readME.split(', ');
 
     /*words = (words > wordArr.length) ? wordArr.length : words;
