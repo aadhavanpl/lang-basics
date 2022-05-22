@@ -4,12 +4,15 @@ import * as React from "react";
 import Button from '@mui/material/Button'
 import './App.css';
 import { randomWords } from "./random";
+import { chooseAudio } from "./audio";
+import { play } from "./play";
+import { stop } from "./stop";
 
 let final_ans = randomWords();
 //console.log(final_ans)
 let ans = "";
 
-let source = "http://127.0.0.1:8887/audio/" + final_ans + ".m4a";
+// let source = "http://127.0.0.1:8887/audio/" + final_ans + ".m4a";
 
 /*function stringAppend(letter) {
   ans = ans.concat(letter);
@@ -20,18 +23,25 @@ let source = "http://127.0.0.1:8887/audio/" + final_ans + ".m4a";
 function AudioPlayer() {
   return (
     <div>
-      <Button onClick={() => {console.log(source); document.getElementById("audiosource").setAttribute('src', source);}} type="button">Reset</Button>
-      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.play();}} type="button">Play</Button>
-      <Button onClick={() => {var GFG = document.getElementById("idAudio"); GFG.pause(); GFG.currentTime = 0;}} type="button">Stop</Button>
+      {/* <audio id="idAudio">  
+        <source id="url" src="http://127.0.0.1:8887/audio/கல்.m4a"></source>   
+      </audio> */}
+
+{/* console.log(source); document.getElementById("audiosource").setAttribute('src', source); */}
+
+      <Button onClick={() => {console.log(ans); console.log(final_ans); if(ans===final_ans) { console.log("correct"); final_ans = randomWords(); chooseAudio(final_ans); } else { console.log("incorrect. try again"); }ans = "";}}>Check</Button>
+      <Button onClick={() => {final_ans = randomWords(); chooseAudio(final_ans)}} type="button">New</Button>
+      <Button onClick={() => {play()}} type="button">Play</Button>
+      <Button onClick={() => {stop()}} type="button">Stop</Button>
     </div>
   )
 }
 
 function App() {
   return (
-    <div>
+    <div className='buttons'>
         <div className='App'>
-          <Button variant = "contained" onClick={() => {console.log(ans);    console.log(final_ans);     if(ans===final_ans)  {       console.log("correct");         final_ans = randomWords()    }    else         console.log("incorrect. try again");         ans = "";    }}>‎</Button>
+          <Button variant = "contained" onClick={() => { ans = ans.concat("ஃ");}}>ஃ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("அ");}}>அ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஆ");}}>ஆ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("இ");}}>இ</Button>
