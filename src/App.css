@@ -1,9 +1,24 @@
-.App {
-  text-align: center;
-  padding: 1.5px;
+.all-buttons {
   display: flex;
-  height: 37px;
-  width: 50px;
+  flex-direction: column;
+  background-color: rebeccapurple;
+
+}
+
+.row-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+Button {
+  flex-grow: 1;
+  flex-basis: 100;
+}
+
+#che {
+  border-radius: 100%;
 }
 
 .App-logo {

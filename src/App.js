@@ -29,7 +29,7 @@ function AudioPlayer() {
 
 {/* console.log(source); document.getElementById("audiosource").setAttribute('src', source); */}
 
-      <Button onClick={() => {console.log(ans); console.log(final_ans); if(ans===final_ans) { console.log("correct"); final_ans = randomWords(); chooseAudio(final_ans); } else { console.log("incorrect. try again"); }ans = "";}}>Check</Button>
+      <Button id="che" variant = "contained" onClick={() => {console.log(ans); console.log(final_ans); if(ans===final_ans) { console.log("correct"); final_ans = randomWords(); chooseAudio(final_ans); } else { console.log("incorrect. try again"); }ans = "";}}>Check</Button>
       <Button onClick={() => {final_ans = randomWords(); chooseAudio(final_ans)}} type="button">New</Button>
       <Button onClick={() => {play()}} type="button">Play</Button>
       <Button onClick={() => {stop()}} type="button">Stop</Button>
@@ -39,8 +39,8 @@ function AudioPlayer() {
 
 function App() {
   return (
-    <div className='buttons'>
-        <div className='App'>
+    <div className='all-buttons'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஃ");}}>ஃ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("அ");}}>அ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஆ");}}>ஆ</Button>
@@ -56,7 +56,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஔ");}}>ஔ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("க்");}}>க்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("க");}}>க</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("கா");}}>கா</Button>
@@ -72,7 +72,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("கௌ");}}>கௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ங்");}}>ங்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ங");}}>ங</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஙா");}}>ஙா</Button>
@@ -88,7 +88,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஙௌ");}}>ஙௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ச்");}}>ச்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ச");}}>ச</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("சா");}}>சா</Button>
@@ -104,7 +104,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("சௌ");}}>சௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஞ்");}}>ஞ்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஞ");}}>ஞ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஞா");}}>ஞா</Button>
@@ -120,7 +120,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("ஞௌ");}}>ஞௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ட்");}}>ட்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ட");}}>ட</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("டா");}}>டா</Button>
@@ -136,7 +136,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("டௌ");}}>டௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ண்");}}>ண்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ண");}}>ண</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ணா");}}>ணா</Button>
@@ -152,7 +152,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("ணௌ");}}>ணௌ</Button>
         </div>
         
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("த்");}}>த்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("த");}}>த</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("தா");}}>தா</Button>
@@ -168,7 +168,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("தௌ");}}>தௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ந்");}}>ந்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ந");}}>ந</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("நா");}}>நா</Button>
@@ -184,7 +184,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("நௌ");}}>நௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ப்");}}>ப்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ப");}}>ப</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("பா");}}>பா</Button>
@@ -200,7 +200,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("பௌ");}}>பௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ம்");}}>ம்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ம");}}>ம</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("மா");}}>மா</Button>
@@ -216,7 +216,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("மௌ");}}>மௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ய்");}}>ய்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ய");}}>ய</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("யா");}}>யா</Button>
@@ -233,7 +233,7 @@ function App() {
         </div>
 
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ர்");}}>ர்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ர");}}>ர</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ரா");}}>ரா</Button>
@@ -249,7 +249,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("ரௌ");}}>ரௌ</Button>
         </div>
  
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ல்");}}>ல்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ல");}}>ல</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("லா");}}>லா</Button>
@@ -265,7 +265,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("லௌ");}}>லௌ</Button>
         </div> 
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("வ்");}}>வ்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("வ");}}>வ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("வா");}}>வா</Button>
@@ -281,7 +281,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("வௌ");}}>வௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ழ்");}}>ழ்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ழ");}}>ழ</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ழா");}}>ழா</Button>
@@ -297,7 +297,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("ழௌ");}}>ழௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ள்");}}>ள்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ள");}}>ள</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ளா");}}>ளா</Button>
@@ -313,7 +313,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("ளௌ");}}>ளௌ</Button>
         </div>
 
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ற்");}}>ற்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ற");}}>ற</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("றா");}}>றா</Button>
@@ -329,7 +329,7 @@ function App() {
           <Button variant = "contained" onClick={() => { ans = ans.concat("றௌ");}}>றௌ</Button>
         </div>
         
-        <div className='App'>
+        <div className='row-buttons'>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ன்");}}>ன்</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("ன");}}>ன</Button>
           <Button variant = "contained" onClick={() => { ans = ans.concat("னா");}}>னா</Button>
