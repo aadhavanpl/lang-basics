@@ -17,10 +17,6 @@ Button {
   flex-basis: 100;
 }
 
-#che {
-  border-radius: 100%;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
