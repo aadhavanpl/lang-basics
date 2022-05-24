@@ -45,6 +45,10 @@ function AudioPlayer() {
         console.log("incorrect. try again"); 
       }
         ans = "";
+        setTimeout(function(){
+          document.getElementById("result").innerHTML = "";
+          document.getElementById("printing").innerHTML = "";
+        }, 3000);        
       }}>Check</Button>
 
       <Button variant="outlined" color="secondary" onClick={() => {
@@ -57,13 +61,20 @@ function AudioPlayer() {
       <Button variant="outlined" color="secondary" onClick={() => {play()}} type="button">Play</Button>
       {/* <IconButton aria-label="PlayCircle" size="large" color="secondary"></IconButton> */}
       <Button variant="outlined" color="secondary" onClick={() => {stop()}} type="button">Stop</Button>
-      <Button variant="contained" color="error" onClick={() => {document.getElementById("final_answer").innerHTML = final_ans;}} type = "button">Answer</Button>
-      <Button variant="contained" color="secondary" onClick={() => {
+
+      <Button variant="contained" color="error" onClick={() => {
+          document.getElementById("final_answer").innerHTML = final_ans;
+          setTimeout(function(){
+            document.getElementById("final_answer").innerHTML = "";
+          }, 3000);
+      }} type = "button">Answer</Button>
+
+      {/* <Button variant="contained" color="secondary" onClick={() => {
         ans = ""
         document.getElementById("printing").innerHTML = ans;
         document.getElementById("final_answer").innerHTML = "";
         document.getElementById("result").innerHTML = "";
-      }}>Clear</Button>
+      }}>Clear</Button> */}
     </div>
   )
 }
