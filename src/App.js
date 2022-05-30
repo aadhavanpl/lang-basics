@@ -7,8 +7,9 @@ import { randomWords } from "./random";
 import { chooseAudio } from "./audio";
 import { play } from "./play";
 import { stop } from "./stop";
-import PlayCircleIcon from '@mui/icons-material/PlayCircle';
-import { IconButton } from "@mui/material";
+import nav from "./nav"
+// import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+// import { IconButton } from "@mui/material";
 
 let final_ans = randomWords();
 //console.log(final_ans)
@@ -404,6 +405,7 @@ function App() {
 function body() {
   return (
     <div>
+      <nav />
       <AudioPlayer />
       <Print />
       <App />
